@@ -20,7 +20,7 @@ int main()
 	}
 	while (flag)
 	{
-		cout << "请选择要进行的操作：1.入栈 2.出栈 3.读取栈顶元素 4.置空 5.退出" << endl;
+		cout << "请选择要进行的操作：1.入栈 2.出栈 3.读取栈顶元素 4.查看栈是否为空 5.退出" << endl;
 		cin >> choice;
 		switch (choice)
 		{
@@ -47,9 +47,11 @@ int main()
 		break;
 		case 4:
 		{
-			myStack.Empty();
-			cout << "置空成功！" << endl;
-			myStack.Print();
+			if (myStack.Empty() == 1)
+				cout << "栈空" << endl;
+			else
+				cout << "栈非空"<<endl;
+				;
 		}
 		break;
 		case 5:
